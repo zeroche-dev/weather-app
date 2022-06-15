@@ -7,8 +7,8 @@ Very simple weather app coded using Laravel, random data.
 
 ## Requirements
 
-Laravel >= 9
-PHP >= 8
+Laravel >= 9  
+PHP >= 8  
 Docker
 
 ## Usage
