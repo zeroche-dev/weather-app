@@ -1,5 +1,6 @@
 body {
-    background: url("/assets/images/background.jpg");
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #5bafe3 0%, #6cb75a 100%);
     background-size: cover;
     color: white;
 }
@@ -10,7 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    min-height: 80vh;
+    min-height: 99vh;
 }
 .weather-section {
     width: 100%;
@@ -78,7 +79,8 @@ body {
     font-size: 2.1em;
 }
 .daily-forecast-item .weather-type{
-    font-size: 1.5em;
+
+    font-size: 1.0em;
 }
 .daily-forecast-item .updated{
     font-size: 0.7em;

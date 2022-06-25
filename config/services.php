@@ -30,5 +30,13 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
+    'visualcrossing' => [
+        'key' => env('VISUALCROSSING_KEY'),
+        'endpoint' => env('VISUALCROSSING_API_ENDPOINT')
+    ],
+    'ipapi' => [
+        'endpoint' => env('IPAPI_ENDPOINT'),
+        'key' => env('IPAPI_KEY')
+    ]
 
 ];

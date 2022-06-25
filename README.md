@@ -13,10 +13,25 @@ Docker
 
 ## Usage
 
+Configure
+
+```bash
+.env
+```
+
+
+Configure /etc/hosts by adding this text in the first line
+
+```bash
+mysql   127.0.0.1 
+```
+
 Run 
 
 ```bash 
+
 ./vendor/bin/sail up
+
 ```
 
 Recreate database
@@ -29,9 +44,22 @@ php artisan migarte
 php artisan db:seed
 ```
 
+Run cron jobs
+
+```bash
+php artisan schedule:work
+```
+
+Update weather manually
+
+```
+php artisan weather:update
+```
+
+
 Try it
 
-[http://localhost:80/city/1](http://localhost:80/city/1)
+[http://localhost:80/city](http://localhost:80/city)
 
 
 

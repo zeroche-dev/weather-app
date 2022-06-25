@@ -20,10 +20,11 @@
         <input type="hidden" name="_method" value="GET">
         <input type="hidden" name="city" value="">
         <main class="weather">
+            <h1>{{$city}}</h1>
             <section class="weather-section city-selection ">
                     @if(count($cities)>0)
                         @foreach ($cities as $item)
-                            <a href="{{url('city', ['id' => $item->id])}}" class="city-selection-item black-box">{{$item->city}}</a>
+                            <a href="{{url('city', ['city' => $item->city])}}" class="city-selection-item black-box">{{$item->city}}</a>
                         @endforeach
                     @endif
             </section>
@@ -32,20 +33,37 @@
                 @for ($i = 0; $i < 7; $i++)
                     <div class="daily-forecast-item black-box">
                         <span class="day">{{$days[$i]}}</span>
-                        @switch($forecasts[$i]->weather_type)
-                            @case("Sunny")
-                                <i class="fa fa-5x fa-sun" style="color: yellow;"></i>
+                        @switch($forecasts[$i]->icon)
+                            @case("clear-day")
+                                <i class="fa fa-5x fa-sun" style="color: rgb(233, 233, 97);"></i>
                             @break
-                            @case("Cloudy")
+                            @case("cloudy")
                                 <i class="fa fa-5x fa-cloud" style="color: white;"></i>
                             @break
-                            @case("Windy")
+                            @case("rain")
+                                <i class="fa fa-5x fa-cloud-rain" style="color: white;"></i>
+                            @break
+                            @case("partly-cloudy-day")
+                                <i class="fa fa-5x fa-cloud-sun" style="color: white;"></i>
+                            @break
+                            @case("partly-cloudy-night")
+                                <i class="fa fa-5x fa-clouds" style="color: white;"></i>
+                            @break
+                            @case("wind")
                                 <i class="fa fa-5x fa-wind" style="color: white;"></i>
                             @break
+                            @case("fog")
+                                <i class="fa fa-5x fa-cloud-fog" style="color: white;"></i>
+                            @break
+                            @case("snow")
+                                <i class="fa fa-5x fa-cloud-snow" style="color: white;"></i>
+                            @break
                             @default
+                                <i class="fa fa-5x fa-wind" style="color: white;"></i>
+                            @break
                         @endswitch
-                        <span class="temperature">{{$forecasts[$i]->weather_type}}</span>
-                        <span class="weather-type">{{$forecasts[$i]->temperature}} &#x2103;</span>
+                        <span class="temperature">{{$forecasts[$i]->tempmax}} &#x2103;</span>
+                        <span class="weather-type">{{$forecasts[$i]->conditions}}</span>
                         <span class="updated">Updated: {{$forecasts[$i]->updated_at}}</span>
                     </div>
                     @endfor

@@ -17,20 +17,20 @@ class ForecastRegionFactory extends Factory
      * @return array<string, mixed>
      */
 
-    protected static $cities = [ "Warszawa", "Kraków", "Łódź", "Wrocław", "Poznań", "Gdańsk", "Szczecin", "Bydgoszcz", "Lublin", "Białystok", "Rzeszów" ];
-    
+
+
     public function definition()
     {
         return [
-            'city' => self::$cities[0],
+            'city' => 'Rzeszów',
             'created_at' => now(),
             'updated_at' => now()
         ];
     }
 
-    public function forCity($i) {
+    public function forCity($city) {
         return $this->state([
-            'city' =>self::$cities[$i],
+            'city' => $city,
             'created_at' => now(),
             'updated_at' => now()
         ]);

@@ -13,4 +13,4 @@ use App\Http\Controllers\WeatherController;
 |
 */
 
-Route::get("/city/{id}", [WeatherController::class, 'city']);
+Route::get("/city/{city?}", [WeatherController::class, 'city'])->name('city');;
