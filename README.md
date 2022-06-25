@@ -3,7 +3,7 @@
 
 ## About project
 
-Very simple weather app coded using Laravel, random data.
+Very simple weather app coded using Laravel 9
 
 ## Requirements
 
