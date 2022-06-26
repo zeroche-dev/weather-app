@@ -58,6 +58,7 @@ php artisan weather:update
 
 
 Try it
+[http://php-laravel-weather-app.herokuapp.com/city/Rzesz%C3%B3w](demo)
 
 [http://localhost:80/city](http://localhost:80/city)
 
