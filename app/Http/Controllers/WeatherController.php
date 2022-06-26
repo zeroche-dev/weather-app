@@ -18,6 +18,7 @@ class WeatherController extends Controller
 
         if(!$city)
         {
+            //Hardcoded sample value but it's bearable
             $ip = App::environment('local') ? '193.22.91.42' : $request->getClientIp();
 
             $city = IpApiGeoLocationService::getCityByIp($ip);
