@@ -20,7 +20,7 @@ Configure
 ```
 
 
-Configure /etc/hosts by adding this text in the first line
+Edit /etc/hosts by adding this line on top
 
 ```bash
 mysql   127.0.0.1 

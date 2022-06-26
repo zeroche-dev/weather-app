@@ -13,6 +13,9 @@ body {
     margin: 0 auto;
     min-height: 99vh;
 }
+.weather h1{
+    text-shadow: 2px 2px 4px #000000;
+}
 .weather-section {
     width: 100%;
     display: flex;
